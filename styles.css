@@ -1,0 +1,267 @@
+/* =========================================================
+   STYLES.CSS — Entrega II
+   Tema: Clean e Moderno (Site Empresarial)
+   ========================================================= */
+
+/* ==============================
+   1. VARIÁVEIS (Design System)
+   ============================== */
+:root {
+  --color-primary: #1e88e5;
+  --color-primary-light: #64b5f6;
+  --color-secondary: #00acc1;
+  --color-accent: #43a047;
+  --color-neutral-100: #ffffff;
+  --color-neutral-200: #f5f5f5;
+  --color-neutral-700: #616161;
+  --color-neutral-900: #212121;
+
+  --font-family-base: "Poppins", Arial, sans-serif;
+  --font-size-xxs: 0.75rem;
+  --font-size-xs: 0.875rem;
+  --font-size-sm: 1rem;
+  --font-size-md: 1.25rem;
+  --font-size-lg: 1.5rem;
+  --font-size-xl: 2rem;
+
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 48px;
+  --space-6: 64px;
+
+  --container-width: 1200px;
+  --grid-gap: 24px;
+}
+
+/* ==============================
+   2. ESTILOS BASE
+   ============================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-sm);
+  background-color: var(--color-neutral-200);
+  color: var(--color-neutral-900);
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+}
+
+/* ==============================
+   3. CABEÇALHO E NAVEGAÇÃO
+   ============================== */
+header {
+  background: var(--color-neutral-100);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-2) 0;
+}
+
+.logo {
+  font-size: var(--font-size-md);
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.nav-links {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--color-neutral-900);
+  font-weight: 500;
+  position: relative;
+}
+
+.nav-links a:hover {
+  color: var(--color-primary);
+}
+
+/* Submenu Dropdown */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--color-neutral-100);
+  min-width: 160px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  top: 100%;
+  left: 0;
+  z-index: 10;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: var(--space-2);
+  color: var(--color-neutral-900);
+}
+
+.dropdown-content a:hover {
+  background-color: var(--color-neutral-200);
+  color: var(--color-primary);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Menu hambúrguer (mobile) */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background: var(--color-neutral-900);
+}
+
+/* ==============================
+   4. GRID PRINCIPAL (12 colunas)
+   ============================== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--grid-gap);
+}
+
+/* ==============================
+   5. COMPONENTES
+   ============================== */
+.btn {
+  background-color: var(--color-primary);
+  color: var(--color-neutral-100);
+  border: none;
+  padding: var(--space-2) var(--space-3);
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background-color: var(--color-primary-light);
+}
+
+.btn:disabled {
+  background-color: var(--color-neutral-700);
+  cursor: not-allowed;
+}
+
+.card {
+  background: var(--color-neutral-100);
+  border-radius: 12px;
+  padding: var(--space-3);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: var(--space-2);
+  margin-bottom: var(--space-2);
+  border: 1px solid var(--color-neutral-700);
+  border-radius: 6px;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.alert {
+  padding: var(--space-2);
+  border-radius: 6px;
+  margin-bottom: var(--space-2);
+}
+
+.alert-success { background-color: #e8f5e9; color: #2e7d32; }
+.alert-error { background-color: #ffebee; color: #c62828; }
+.alert-info { background-color: #e3f2fd; color: #1565c0; }
+
+.badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: var(--font-size-xs);
+  background-color: var(--color-secondary);
+  color: var(--color-neutral-100);
+}
+
+/* ==============================
+   6. RESPONSIVIDADE
+   ============================== */
+@media (max-width: 1200px) {
+  body { font-size: var(--font-size-xs); }
+}
+
+@media (max-width: 992px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: var(--space-2);
+    background: var(--color-neutral-100);
+    position: absolute;
+    top: 60px;
+    right: 0;
+    padding: var(--space-3);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 400px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
