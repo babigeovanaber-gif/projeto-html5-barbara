@@ -1,10 +1,10 @@
 /* =========================================================
-   STYLES.CSS — Entrega II
+   STYLES.CSS - Entrega II
    Tema: Clean e Moderno (Site Empresarial)
    ========================================================= */
 
 /* ==============================
-   1. VARIÁVEIS (Design System)
+   1. VARIAVEIS (Design System)
    ============================== */
 :root {
   --color-primary: #1e88e5;
@@ -59,7 +59,7 @@ body {
 }
 
 /* ==============================
-   3. CABEÇALHO E NAVEGAÇÃO
+   3. CABECALHO E NAVEGACAO
    ============================== */
 header {
   background: var(--color-neutral-100);
@@ -129,7 +129,7 @@ header {
   display: block;
 }
 
-/* Menu hambúrguer (mobile) */
+/* Menu hamburguer (mobile) */
 .menu-toggle {
   display: none;
   flex-direction: column;
