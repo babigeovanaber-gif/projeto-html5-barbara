@@ -1,67 +1,29 @@
-# Organização Exemplo — Entrega II
+# Organização Exemplo
 
-## 🎯 Objetivo
-Esta segunda entrega tem como foco a aplicação de **CSS3** para transformar a estrutura HTML da Entrega I em uma interface **profissional, responsiva e acessível**.
-
-O site representa uma **organização sem fins lucrativos**, dedicada a projetos sociais nas áreas de educação e saúde.
 
 ---
 
-## 🧩 Estrutura do Projeto
+## 🏁 Entrega Final — Versão v3.0.0
 
-```
-meu-projeto/
-│
-├── index.html
-├── css/
-│   └── styles.css
-├── assets/
-│   └── imagens, ícones e banners
-└── README.md
-```
+### Controle de Versão (Git/GitHub)
+- Branching adotado: **GitFlow** (main, develop, feature/*).
+- Commits semânticos (ex.: `feat:, fix:, docs:, refactor:`).
+- Releases com versionamento semântico (ex.: `v1.0.0`, `v2.0.0`, `v3.0.0`).
 
----
+### Acessibilidade (WCAG 2.1 AA)
+- Navegação por teclado em componentes interativos (menu, toggles, formulários).
+- Skip link para pular direto ao conteúdo.
+- Modos: **claro**, **escuro**, e **alto contraste** (persistidos em localStorage).
+- Foco visível para usuários que navegam com teclado.
+- Suporte básico a leitores de tela (atributos ARIA adicionados nos controles).
 
-## 💅 Design System
-O design do projeto foi desenvolvido com base em um **sistema de design clean e moderno**, contendo:
+### Otimização para Produção
+- Arquivos minificados disponíveis em `css/styles.min.css` e `js/app.min.js`.
+- Recomenda-se compressão adicional de imagens antes do deploy (ex.: TinyPNG).
 
-- **Paleta de 8 cores** (primárias, secundárias e neutras);
-- **Tipografia hierárquica** com 5 tamanhos de fonte;
-- **Sistema modular de espaçamento** (8px a 64px);
-- **Grid de 12 colunas** e **flexbox** para componentes internos;
-- **5 breakpoints responsivos** para adaptação em diferentes telas.
-
----
-
-## 🧭 Recursos Implementados
-
-### Navegação
-- Menu principal **responsivo**, com **submenu dropdown**;
-- **Menu hambúrguer** funcional para dispositivos móveis.
-
-### Componentes
-- **Botões interativos** com estados visuais (hover, active, disabled);
-- **Cards responsivos**;
-- **Formulários estilizados** com validação visual;
-- **Componentes de feedback** (alerts, badges, toasts e modals).
-
-### Responsividade
-O layout foi projetado para se adaptar a diversos tamanhos de tela, utilizando **media queries** em cinco pontos de quebra principais (1200px, 992px, 768px, 576px e 400px).
+### Como publicar (deploy)
+- Fazer merge de `develop` em `main` e criar tag `v3.0.0`.
+- Configurar GitHub Pages (ou qualquer serviço de hospedagem) apontando para a branch `main`.
+- Confirmar que o repositório está público para correção pela disciplina.
 
 ---
-
-## ⚙️ Como Executar
-
-1. Baixe ou clone o repositório no GitHub.
-2. Mantenha a seguinte estrutura de pastas:
-   - `index.html`
-   - `css/styles.css`
-   - `assets/` (imagens)
-3. Abra o arquivo `index.html` em um navegador de sua preferência.
-
----
-
-## 🧠 Autor(a)
-**Bárbara Bernardo**  
-Curso de **Direito** — Atividade de **Desenvolvimento Web (CSS3)**  
-Entrega II — 2025

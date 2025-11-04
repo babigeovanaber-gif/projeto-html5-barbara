@@ -7,56 +7,44 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-
-  <!-- ============================
-       CABEÇALHO E NAVEGAÇÃO
-       ============================ -->
+  <a href="#app" class="skip-link">Pular para o conteúdo principal</a>
   <header>
-    <div class="container navbar">
-      <div class="logo">Organização Exemplo</div>
-
-      <div class="menu-toggle" id="menu-toggle" aria-label="Abrir menu" role="button" tabindex="0">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-
-      <nav class="nav-links" id="nav-links" aria-label="Navegação principal">
-        <a href="#/" data-route="/">Início</a>
-
-        <div class="dropdown">
-          <a href="#/projetos" data-route="/projetos">Projetos ▾</a>
-          <div class="dropdown-content">
-            <a href="#/projetos" data-route="/projetos">Projetos Sociais</a>
-            <a href="#/equipe" data-route="/equipe">Equipe</a>
-            <a href="#/parceiros" data-route="/parceiros">Parceiros</a>
-          </div>
-        </div>
-
-        <a href="#/cadastro" data-route="/cadastro">Cadastro</a>
-        <a href="#/contato" data-route="/contato">Contato</a>
+    <div class="container">
+      <img src="assets/images/logo.png" alt="Logomarca da Organização" class="logo" width="140" height="60">
+      <nav aria-label="Navegação principal">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="projetos.html">Projetos Sociais</a></li>
+          <li><a href="cadastro.html">Cadastro</a></li>
+        </ul>
       </nav>
     </div>
   </header>
 
-  <!-- Área principal onde a SPA renderiza -->
-  <main id="app" class="container" role="main">
-    <!-- Conteúdo inicial é carregado via JS -->
+  <main>
+    <section aria-labelledby="sobre-titulo">
+      <h1 id="sobre-titulo">Sobre a Organização</h1>
+      <p>Somos uma organização sem fins lucrativos dedicada a apoiar comunidades locais com projetos de educação e saúde.</p>
+      <figure>
+        <img srcset="assets/optimized/banner-1200w.jpg 1200w, assets/optimized/banner-800w.jpg 800w" sizes="(max-width:600px) 100vw, 800px" src="assets/optimized/banner-800w.jpg" alt="Voluntários em ação" loading="lazy">
+        <figcaption>Voluntários em um de nossos eventos comunitários.</figcaption>
+      </figure>
+    </section>
+
+    <section aria-labelledby="contato-titulo">
+      <h2 id="contato-titulo">Contato</h2>
+      <address>
+        <p>Email: <a href="mailto:contato@organizacao.org">contato@organizacao.org</a></p>
+        <p>Telefone: <a href="tel:+5511999999999">(11) 99999-9999</a></p>
+        <p>Endereço: Rua Exemplo, 123 — São Paulo, SP</p>
+      </address>
+    </section>
   </main>
 
-  <!-- Região para toasts/alerts dinâmicos -->
-  <div id="toasts" aria-live="polite" style="position: fixed; right: 16px; bottom: 16px; z-index: 2000;"></div>
-
   <footer>
-    <div class="container">
-      <p>© <time datetime="2025">2025</time> Organização Exemplo — Todos os direitos reservados.</p>
-    </div>
+    <p>© <time datetime="2025">2025</time> Organização Exemplo — Todos os direitos reservados.</p>
   </footer>
 
-  <!-- Scripts da SPA -->
-  <script src="js/router.js" type="module" defer></script>
-  <script src="js/formValidation.js" type="module" defer></script>
-  <script src="js/app.js" type="module" defer></script>
-
+  <script src="js/scripts.js" defer></script>
 </body>
 </html>
