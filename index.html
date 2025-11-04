@@ -15,49 +15,37 @@
     <div class="container navbar">
       <div class="logo">Organização Exemplo</div>
 
-      <div class="menu-toggle" id="menu-toggle">
+      <div class="menu-toggle" id="menu-toggle" aria-label="Abrir menu" role="button" tabindex="0">
         <span></span>
         <span></span>
         <span></span>
       </div>
 
-      <nav class="nav-links" id="nav-links">
-        <a href="index.html">Início</a>
+      <nav class="nav-links" id="nav-links" aria-label="Navegação principal">
+        <a href="#/" data-route="/">Início</a>
 
         <div class="dropdown">
-          <a href="#projetos">Projetos ▾</a>
+          <a href="#/projetos" data-route="/projetos">Projetos ▾</a>
           <div class="dropdown-content">
-            <a href="projetos.html">Projetos Sociais</a>
-            <a href="#">Equipe</a>
-            <a href="#">Parceiros</a>
+            <a href="#/projetos" data-route="/projetos">Projetos Sociais</a>
+            <a href="#/equipe" data-route="/equipe">Equipe</a>
+            <a href="#/parceiros" data-route="/parceiros">Parceiros</a>
           </div>
         </div>
 
-        <a href="cadastro.html">Cadastro</a>
-        <a href="#contato">Contato</a>
+        <a href="#/cadastro" data-route="/cadastro">Cadastro</a>
+        <a href="#/contato" data-route="/contato">Contato</a>
       </nav>
     </div>
   </header>
 
-  <main>
-    <section aria-labelledby="sobre-titulo" class="container">
-      <h1 id="sobre-titulo">Sobre a Organização</h1>
-      <p>Somos uma organização sem fins lucrativos dedicada a apoiar comunidades locais com projetos de educação e saúde.</p>
-      <figure>
-        <img srcset="assets/optimized/banner-1200w.jpg 1200w, assets/optimized/banner-800w.jpg 800w" sizes="(max-width:600px) 100vw, 800px" src="assets/optimized/banner-800w.jpg" alt="Voluntários em ação" loading="lazy">
-        <figcaption>Voluntários em um de nossos eventos comunitários.</figcaption>
-      </figure>
-    </section>
-
-    <section aria-labelledby="contato-titulo" class="container">
-      <h2 id="contato-titulo">Contato</h2>
-      <address>
-        <p>Email: <a href="mailto:contato@organizacao.org">contato@organizacao.org</a></p>
-        <p>Telefone: <a href="tel:+5511999999999">(11) 99999-9999</a></p>
-        <p>Endereço: Rua Exemplo, 123 — São Paulo, SP</p>
-      </address>
-    </section>
+  <!-- Área principal onde a SPA renderiza -->
+  <main id="app" class="container" role="main">
+    <!-- Conteúdo inicial é carregado via JS -->
   </main>
+
+  <!-- Região para toasts/alerts dinâmicos -->
+  <div id="toasts" aria-live="polite" style="position: fixed; right: 16px; bottom: 16px; z-index: 2000;"></div>
 
   <footer>
     <div class="container">
@@ -65,14 +53,10 @@
     </div>
   </footer>
 
-  <script>
-    const menuToggle = document.getElementById("menu-toggle");
-    const navLinks = document.getElementById("nav-links");
+  <!-- Scripts da SPA -->
+  <script src="js/router.js" type="module" defer></script>
+  <script src="js/formValidation.js" type="module" defer></script>
+  <script src="js/app.js" type="module" defer></script>
 
-    menuToggle.addEventListener("click", () => {
-      navLinks.classList.toggle("active");
-      menuToggle.classList.toggle("open");
-    });
-  </script>
 </body>
 </html>

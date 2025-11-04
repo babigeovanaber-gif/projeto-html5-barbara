@@ -1,3 +1,5 @@
+# Organização Exemplo — Entrega II
+
 ## 🎯 Objetivo
 Esta segunda entrega tem como foco a aplicação de **CSS3** para transformar a estrutura HTML da Entrega I em uma interface **profissional, responsiva e acessível**.
 
